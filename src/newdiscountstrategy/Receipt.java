@@ -1,14 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package newdiscountstrategy;
 
-/**
- *
- * @author sawyer
- */
 public class Receipt {
 
     private Customer customer;
@@ -29,7 +21,7 @@ public class Receipt {
         }
     }
 
-    public double getTotalDiscount() {
+    private double getTotalDiscount() {
         double total = 0;
         for (LineItem item : lineItems) {
             total += item.getDiscount();
@@ -46,7 +38,7 @@ public class Receipt {
         return db.findProduct(prodId);
     }
 
-    public void addItemToArray(LineItem item) {
+    private void addItemToArray(LineItem item) {
         LineItem[] temp = new LineItem[lineItems.length + 1];
         System.arraycopy(lineItems, 0, temp, 0, lineItems.length);
         temp[lineItems.length] = item;
