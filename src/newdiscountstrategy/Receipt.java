@@ -24,7 +24,7 @@ public class Receipt {
         System.out.println(customer.getName());
         for (LineItem lineItem : lineItems) {
             System.out.println(lineItem.getProdName() + " " + lineItem.getProdPrice());
-            System.out.println("Your discount" + lineItem.getDiscount());
+            System.out.println("Your discount " + lineItem.getDiscount());
         }
     }
 
