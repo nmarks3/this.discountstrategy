@@ -4,10 +4,10 @@ package newdiscountstrategy;
 
 public class LineItem {
 
-    private Product product;
+    private Product product; //flexability << could implement interface
     private int qty;
 
-    public LineItem(Product product, int qty) {
+    public LineItem(Product product, int qty) { // should lookup product here
         this.product = product;
         this.qty = qty;
     }
